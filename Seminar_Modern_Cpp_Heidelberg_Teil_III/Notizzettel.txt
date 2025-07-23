@@ -1,0 +1,23 @@
+=============================================
+
+Seminar Modern C++
+
+Guten Morgen
+
+Peter Loos
+
+C/C++  Java C#  JavaSript Mobile Programming 
+
+Back-to-the-Roots: C++
+
+(( C++:  schwierige Sprache  ))
+
+=============================================
+
+Github
+
+https://github.com/pelocpp
+
+https://github.com/pelocpp/cpp_modern
+
+=============================================
