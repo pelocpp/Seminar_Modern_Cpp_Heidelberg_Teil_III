@@ -21,3 +21,69 @@ https://github.com/pelocpp
 https://github.com/pelocpp/cpp_modern
 
 =============================================
+
+auto:
+
+A) Definition einer Variablen
+
+B) Rückgabetyp einer Funktion
+
+C) Definition eines Parameters
+
+i)
+
+    static auto sum2(short f1, short f2)
+    {
+        return f1 + f2;
+00007FF7EDE919A5  movsx       eax,word ptr [f1]  
+00007FF7EDE919AC  movsx       ecx,word ptr [f2]  
+00007FF7EDE919B3  add         eax,ecx  
+    }
+
+        static auto sum3(int f1, int f2)
+    {
+        return f1 + f2;
+00007FF7EDE919F3  mov         eax,dword ptr [f2]  
+00007FF7EDE919F9  mov         ecx,dword ptr [f1]  
+00007FF7EDE919FF  add         ecx,eax  
+00007FF7EDE91A01  mov         eax,ecx  
+    }
+
+Wann ist short relevant:
+
+Habe viele Werte // Array // Vector: Speicher
+
+==========================================
+
+auto:
+-----
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/Auto/Auto.md
+
+==========================================
+
+Generische Funktionen:
+---------------------
+
+auto als Parameter
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/GenericFunctions/GenericFunctions.md
+
+============================================
+
+Lambda:
+
+Wie sieht der Compiler (intern) ein Lambda ???
+
+Eine struct / class, die den operator() hat.
+
+Tool:  Cpp Insights
+
+https://cppinsights.io/
+
+Converter:
+
+Modern ++ nach Classic C++:
+
+
+

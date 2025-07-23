@@ -129,6 +129,9 @@
     <ClCompile Include="Topic_02_Source_StreamBuf_02.cpp" />
     <ClCompile Include="Topic_03_Source_Toth_Performance.cpp" />
     <ClCompile Include="Topic_04_Source_WCHAR.cpp" />
+    <ClCompile Include="Topic_05_auto.cpp" />
+    <ClCompile Include="Topic_06_Generic_Functions.cpp" />
+    <ClCompile Include="Topic_07_Lambda.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScopedTimer.h" />

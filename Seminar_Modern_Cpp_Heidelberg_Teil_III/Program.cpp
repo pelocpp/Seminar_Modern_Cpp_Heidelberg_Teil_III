@@ -10,10 +10,13 @@ void main_wchar();
 void test_simon_toth_performance_01();
 void test_simon_toth_performance_02();
 
+void main_auto();
+void main_generic_functions();
+void main_lambdas();
+
 int main()
 {
-    test_simon_toth_performance_01();
-    test_simon_toth_performance_02();
+    main_lambdas();
 }
 
 // ===========================================================================
