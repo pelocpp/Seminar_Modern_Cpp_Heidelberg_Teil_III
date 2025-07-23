@@ -59,13 +59,13 @@ namespace GenericFunctions {
 
     static void test_02()
     {
-        Function<int>(1, 123);
+        //Function<int>(1, 123);
 
-        const int n = 456;
-        Function(n, 123);  // Type Deduction
+        //const int n = 456;
+        //Function(n, 123);  // Type Deduction
 
-        Function<double>(123.456, 123);
-        Function<std::string>(std::string{ "ABC" }, 123);
+        //Function<double>(123.456, 123);
+        //Function<std::string>(std::string{ "ABC" }, 123);
     }
 
     // ---------------------------------------------------------------------------------

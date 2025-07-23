@@ -138,7 +138,9 @@ namespace Lambdas {
         std::sort(
             vec.begin(),
             vec.end(),
-            [=](int n1, int n2) { 
+            [=] (int n1, int n2) { 
+
+             //   flagDirection = false;
 
                 return (flagDirection) ? n1 < n2 : n1 > n2;
 
@@ -329,7 +331,7 @@ namespace Lambdas {
 
         auto lambda3 = [ptr = std::move(ptr)]() {
             ptr->doSomething();
-            };
+        };
 
         lambda3();
     }

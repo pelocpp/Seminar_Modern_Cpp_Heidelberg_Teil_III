@@ -132,6 +132,13 @@
     <ClCompile Include="Topic_05_auto.cpp" />
     <ClCompile Include="Topic_06_Generic_Functions.cpp" />
     <ClCompile Include="Topic_07_Lambda.cpp" />
+    <ClCompile Include="Topic_08_Variadic_Templates.cpp" />
+    <ClCompile Include="Topic_09_RValue.cpp" />
+    <ClCompile Include="Topic_10_MoveSemantik.cpp" />
+    <ClCompile Include="Topic_11_Exception Safety.cpp" />
+    <ClCompile Include="Topic_12_ADL.cpp" />
+    <ClCompile Include="Topic_13_Two_Phase_Name_Lookup.cpp" />
+    <ClCompile Include="Topic_14_UniversalReference.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScopedTimer.h" />

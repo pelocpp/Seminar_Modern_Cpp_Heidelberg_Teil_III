@@ -14,6 +14,16 @@ Back-to-the-Roots: C++
 
 =============================================
 
+ToDo-Liste:
+
+Type-Traits // Metaprogramming.
+
+Frage: Kann man bzgl. eines bestimmten Datentyps etwas 
+spezifisches machen ??
+
+=============================================
+
+
 Github
 
 https://github.com/pelocpp
@@ -85,5 +95,210 @@ Converter:
 
 Modern ++ nach Classic C++:
 
+// ======================================================
+
+Variadic Templates:
+
+a) How ????
+
+b) Why ????  std::make_unique
+
+i)  Verständnis
+
+ii) Anwenden / umsetzen
 
 
+Transport von Daten von A nach B:
+--------------------------------
+
+std::make_unique
+std::make_shared
+std::make_tuple
+
+std::thread
+std::jthread
+
+Methode emplace_back ...
+
+Hmmm, Modern C++:
+
+KRITIK:  Da wird zu viel KOPIERT.
+
+Vermeiden: Am Stack: Referenz
+
+C++ 11:  Man kann jetzt statt kopieren auch verschieben.
+
+Transport von Daten von A nach B:
+
+Hier sollte man beim Transport auch verschieben können:
+
+Perfekten Transport // Perfekte Forwarding
+
+
+// ======================================================
+
+Was ist der Kern von C++:
+
+C++ ohne Templates
+
+==> C++:  Bjarne Stroustrup
+
+==>  C++:   C with Classes
+
+==> Alexander Alexandrowitsch Stepanow:  Generischen Programmierung
+
+Stepanow + Stroustrup:   C++:   Bibliothek  // STL
+
+    Standard TEMPLATE Library
+
+=====================================================
+
+C:
+
+printf:
+
+... Ellipsis
+
+Very Hacky:  varg, vstart, ...
+
+Why: ... in C:
+
+Problem:  man wollte printf:
+
+printf ("%d und %f", 1, 2.5);
+
+printf (char* format, ...);
+
+printf (char* format, ...);  varg, vstart
+
+my_func (int, ...)
+
+
+Realisierung von printf: 
+
+Die Adresse der ersten Parameters war der "Stack Öffner"
+
+Dennis Ritchie:
+
+"A Programmer knows what he does"
+
+
+================================================
+
+Parameter Pack
+
+Exakt: Eine komma-getrennte Liste von Werten / Datentypen
+
+=========================================================
+
+Frage: Kann man bzgl. eines bestimmten Datentyps etwas 
+spezifisches machen ??
+
+Yes ==> 
+
+=========================================================
+
+C++:
+
+Was ist eine Referenz:
+
+Ein Alias für ein vorhandenes Objekt (Variable).
+
+Ab C++ 11:
+
+Es gibt eine zweite Art von Referenz: int&& vs int&
+
+C: Wertzuweisung:
+
+a = b + 5;
+
+Links: Adresse   // LValue
+
+Rechts: Wert     // RValue
+
+int&:   LValue - Referenz // benannte Referenz
+
+int&&:  RValue - Referenz // Objekt OHNE Name (tmp. Objekt)
+
+=======================================================
+
+Verschiebesemantik
+====================
+
+... 10A   // am Stack   , wird freigegeben
+... 6E0   // im Vektor
+
+
+
+
+
+CC: Stack  - nicht vorbelegt.
+
+CD: Heap  - nicht vorbelegt.
+
+DD: Heap  - bereits wieder freigegeben.
+
+===============================
+
+... 3D0  // 000000
+... 3D0
+
+===============================
+
+noexcept:
+
+Neue Philosophie in C++
+
+Exception Safety // Guarantee
+
+
+===============================
+
+auto n;
+
+===============================
+
+Perfect Forwarding:
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/PerfectForwarding/PerfectForwarding.md
+
+    
+=============================================
+
+ToDo-Liste:
+
+Donnerstag:
+
+== Variadic Templates ohne 'template'
+
+== Folding : C++ 17:  Folding expression
+
+== RAII // Stack Unwinding
+
+== Smart Pointer :  std::unique_ptr //   (( std::weak_ptr ))
+
+== Deleter
+
+== (( IOStreams // WChar ))  std::shared_buffer
+
+== Future, Promise, std::async ..., Mutex
+
+   Shared Future ...
+
+== Konzepte (concept, requires)
+
+== Interfaces a la concept // SFINAE
+
+== Type_Traits // std::variant
+
+== Utility Klassen (C++ 17): std::optional, std::any, 
+
+== std::span // std::string_view
+
+
+
+
+Type-Traits // Metaprogramming.
+
+Frage: Kann man bzgl. eines bestimmten Datentyps etwas 
+spezifisches machen ??

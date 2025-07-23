@@ -39,6 +39,27 @@
     <ClCompile Include="Topic_07_Lambda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Topic_08_Variadic_Templates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_09_RValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_10_MoveSemantik.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_11_Exception Safety.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_12_ADL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_13_Two_Phase_Name_Lookup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic_14_UniversalReference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScopedTimer.h">
