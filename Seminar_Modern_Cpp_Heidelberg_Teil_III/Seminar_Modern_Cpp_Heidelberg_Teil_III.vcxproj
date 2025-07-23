@@ -134,7 +134,7 @@
     <ClInclude Include="ScopedTimer.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Notizzettel.txt" />
+    <Text Include="..\Notizzettel.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

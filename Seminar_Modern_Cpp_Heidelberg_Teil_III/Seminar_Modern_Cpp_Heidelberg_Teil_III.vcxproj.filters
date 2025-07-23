@@ -37,6 +37,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Notizzettel.txt" />
+    <Text Include="..\Notizzettel.txt" />
   </ItemGroup>
 </Project>
