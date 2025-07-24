@@ -69,6 +69,9 @@
     <ClCompile Include="Topic_17_UniquePointer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Topic_18_Variant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScopedTimer.h">

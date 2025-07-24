@@ -30,15 +30,15 @@ Donnerstag:
 
 == (( IOStreams // WChar ))  std::shared_buffer
 
-== Future, Promise, std::async ..., Mutex
+== Future, Promise, std::async ..., Mutex // check
 
-   Shared Future ...
+   Shared Future ... // check
 
 == Konzepte (concept, requires)
 
 == Interfaces a la concept // SFINAE
 
-== Type_Traits // std::variant
+== Type_Traits // std::variant // check
 
    Frage: Kann man bzgl. eines bestimmten Datentyps etwas 
    spezifisches machen ??
@@ -420,4 +420,87 @@ Idee: ==> RAII ===> Frage / Beobachtung: open / close
 Frage zu Alignment:
 
 https://github.com/pelocpp/cpp_clean_performant_secure/blob/master/Clean_Performant_Code/Memory_Management/Readme_MemoryManagement_Alignment_Padding.md
+
+// ============================================================
+
+std::thread
+
+==> join // detach
+
+// ============================================================
+
+Win32:
+
+std::thread ==> CreateThread abgebildet.
+
+
+=====================================================
+
+C++ API:  Zweite Option, einen Thread zu erzeugen.
+
+std::future:   Ist ein Datenkanal : geschrieben und gelesen werden kann.
+
+Schreiben: via return
+Lesen:        via get
+
+Hmmm, arbeitet std::async ebenfalls mit  CreateThread ???
+
+Allgemein:
+
+a) CreateThread 
+
+b) Thread Pool
+
+=====================================================
+
+std::thread  
+
+Frage:  Hmm, kann ich auch mit diesem einen Datenkanal einrichten ???
+
+Prinzipiell: Thread-Prozedur: void
+
+=====================================================
+
+
+std::unique_ptr       move-only 
+std::shared_ptr       copy-able
+
+
+std::future                       move-only  //Why: Um einen vorzeitigen D'tor call zu vermeiden
+std::shared_future         copy-able
+
+=====================================================
+
+Multi-Threading:  
+
+Problem: Zugriff auf gemeinsame Daten.  // Konkurrent
+
+Feature:                                                       // Kooperation 
+
+std::condition_variable:   
+
+Wann wird der Lambda gerufen?
+
+a) Unmittelbar nach dem Aufruf von wait
+
+b) notifiy
+
+c) Spurios Wakeup: 
+
+   == C++ muss sein Concurrency-API auf alle möglichen Plattformen abbilden.
+  
+
+
+==================================================================
+
+std::variant:
+
+Hmmmmmmmmmmmm, ähnlich mit Union :)
+
+Ein Datentyp, dessen Variablen Werte unterschiedlichen Typs
+aufnehmen könnnen, zu EINEM Zeitpunkt aber nur EINEN Wert.
+
+Excel: Zelle // Cell
+
+Datum, Zahl, Zeichenkette, num. Wert, ....
 

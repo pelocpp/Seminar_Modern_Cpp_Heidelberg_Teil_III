@@ -20,10 +20,11 @@ void main_perfect_forwarding();
 void main_folding();
 void main_initializer_list();
 void main_unique_ptr();
+void main_variant();
 
 int main()
 {
-    main_unique_ptr();
+    main_variant();
 }
 
 // ===========================================================================
