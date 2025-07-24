@@ -16,6 +16,49 @@ Back-to-the-Roots: C++
 
 ToDo-Liste:
 
+Donnerstag:
+
+== Variadic Templates ohne 'template'  // check
+
+== Folding : C++ 17:  Folding expression // check
+
+== RAII // Stack Unwinding  // check
+
+== Smart Pointer :  std::unique_ptr //   (( std::weak_ptr )) // check
+
+== Deleter // check
+
+== (( IOStreams // WChar ))  std::shared_buffer
+
+== Future, Promise, std::async ..., Mutex
+
+   Shared Future ...
+
+== Konzepte (concept, requires)
+
+== Interfaces a la concept // SFINAE
+
+== Type_Traits // std::variant
+
+   Frage: Kann man bzgl. eines bestimmten Datentyps etwas 
+   spezifisches machen ??
+
+
+== Utility Klassen (C++ 17): std::optional, std::any, 
+
+== std::span // std::string_view
+
+== constexpr
+
+== std::initializer_list    // check
+
+== Zeichenketten
+
+
+=============================================
+
+ToDo-Liste:
+
 Type-Traits // Metaprogramming.
 
 Frage: Kann man bzgl. eines bestimmten Datentyps etwas 
@@ -263,42 +306,118 @@ Perfect Forwarding:
 https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/PerfectForwarding/PerfectForwarding.md
 
     
-=============================================
 
-ToDo-Liste:
+=====================================================
 
-Donnerstag:
+Folding:    Abrollen
 
-== Variadic Templates ohne 'template'
+Arithm. Ausdrücke mit EINEM Operator:
 
-== Folding : C++ 17:  Folding expression
+int n = 1 + 2 + 3 + 4 + 5 + 6;
 
-== RAII // Stack Unwinding
+// viele Variablen: for ....
 
-== Smart Pointer :  std::unique_ptr //   (( std::weak_ptr ))
+int mn = m1 + m2 + m3 + m4 + m5 + m6;
 
-== Deleter
+Trick in der Art und Weise der Code Generierung.
 
-== (( IOStreams // WChar ))  std::shared_buffer
+i) Vielen Werte:   Pack
 
-== Future, Promise, std::async ..., Mutex
+ii) Syntax eines Folding Ausdrucks.
 
-   Shared Future ...
+==========================================
 
-== Konzepte (concept, requires)
+std::vector:              HEAP
+std::initializer_list:    STACK
 
-== Interfaces a la concept // SFINAE
+std::string:              HEAP
+std::string_view:         "ABCDE" / Nicht am Heap / 
 
-== Type_Traits // std::variant
+std::vector
+std::array
+C-Style Array
+std::span
 
-== Utility Klassen (C++ 17): std::optional, std::any, 
+==========================================
 
-== std::span // std::string_view
+SSO: Small String Optimization: 
+
+Kleine Zeichenketten DIREKT in das std::string Objekt mit reinpackt.
+
+Länge:        15.  
+std::string:  40 Bytes
+
+std::string
+
+size
+capacity
+Ptr => Heap
+char buffer[15];  // leer // gefüllt (<= 15)
+
+==========================================
+
+RAII
+
+Idiom:
+
+Worum gehts ???
+
+Resources:    ==> Tabellen im unterlagerten OS
+
+open // close   FILE
+
+attach / detach   Socket
+
+lock // unlock   Mutex  // fatal
+
+new  // delete
 
 
+Frage: Hmmm, habe den 2. Aufruf vergessen // (break)
+
+Idee:
+
+OO // Konstruktoren // Destruktoren
+
+Destruktoren: Wann wird der aufgerufen: 
+
+    Am Ende des Scopes // Deterministisch
+
+Resource:  Wrapper // Hüllenobjekt
+== Konstruktor:  open
+== Destruktoren: close
+
+Beispiel:
+
+https://github.com/pelocpp/cpp_design_patterns/blob/master/Patterns/RAII_Idiom/Resources/Readme.md
 
 
-Type-Traits // Metaprogramming.
+==============================================================
 
-Frage: Kann man bzgl. eines bestimmten Datentyps etwas 
-spezifisches machen ??
+Copy / Move Elision: Auslassen einer dieser beiden Operationen
+
+RVO:  Return Value Optimization
+
+NRVO:  Named Return Value Optimization
+
+=======================================================
+
+std::unique_ptr
+---------------
+
+Ursprünglich:
+
+a) Kapselt einen Zeiger (new)
+
+b) HAT EINEN Besitzer  // Ein std::unique_ptr-Objekt ist NICHT kopierbar.
+
+c) Aber er ist verschiebbar  //  std::move 
+
+d) Hat einen Destruktor: delete
+
+Idee: ==> RAII ===> Frage / Beobachtung: open / close
+
+Frage zu Alignment:
+
+https://github.com/pelocpp/cpp_clean_performant_secure/blob/master/Clean_Performant_Code/Memory_Management/Readme_MemoryManagement_Alignment_Padding.md
+

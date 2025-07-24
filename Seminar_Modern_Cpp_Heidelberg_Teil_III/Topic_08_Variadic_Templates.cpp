@@ -59,9 +59,22 @@ namespace VariadicTemplatesIntro_Seminar {
         }
     }
 
-    void test_variadic_seminar_01() {
+    // C++ 20
+    void printer20(auto&& n) {
 
-        printerCpp17<int, int, int, int, int>(1, 2, 3, 4, 5);
+        // std::cout << n << std::endl;
+        std::cout << std::forward<decltype(n)>(n) << std::endl;
+    }
+
+    void printer20(auto n, auto&& ... args) {         // einpacken
+
+        std::cout << n << std::endl;
+        printer20 (args ...);           // auspacken
+    }
+
+    void test_variadic_seminar() {
+
+        printer20<int, int, int, int, int>(1, 2, 3, 4, 5);
     }
 
     //===========================================================
@@ -126,7 +139,7 @@ namespace VariadicTemplatesIntro_Seminar {
         return tmp;
     }
 
-    void test_variadic_seminar() {
+    void test_variadic_seminar_01() {
 
         // Whyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 

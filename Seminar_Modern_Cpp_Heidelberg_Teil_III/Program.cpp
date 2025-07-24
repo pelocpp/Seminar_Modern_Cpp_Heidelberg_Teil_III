@@ -17,10 +17,13 @@ void main_variadic_templates_introduction();
 void main_rvalue_lvalue();
 void main_move_semantics();
 void main_perfect_forwarding();
+void main_folding();
+void main_initializer_list();
+void main_unique_ptr();
 
 int main()
 {
-    main_perfect_forwarding();
+    main_unique_ptr();
 }
 
 // ===========================================================================
