@@ -144,6 +144,9 @@
     <ClCompile Include="Topic_16_InitializerList.cpp" />
     <ClCompile Include="Topic_17_UniquePointer.cpp" />
     <ClCompile Include="Topic_18_Variant.cpp" />
+    <ClCompile Include="Topic_19_ConstExpr.cpp" />
+    <ClCompile Include="Topic_20_ConstExpr_CRC.cpp" />
+    <ClCompile Include="Topic_21_Concepts.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScopedTimer.h" />

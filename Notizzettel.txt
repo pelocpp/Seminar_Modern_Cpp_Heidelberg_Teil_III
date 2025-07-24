@@ -6,11 +6,20 @@ Guten Morgen
 
 Peter Loos
 
+peter.loos@gmx.de
+-----------------
+
+https://github.com/pelocpp
+
+https://github.com/pelocpp/cpp_modern
+
+https://github.com/pelocpp/cpp_concurrency
+
 C/C++  Java C#  JavaSript Mobile Programming 
 
 Back-to-the-Roots: C++
 
-(( C++:  schwierige Sprache  ))
+(( C++:  schwierige Sprache ))
 
 =============================================
 
@@ -503,4 +512,171 @@ aufnehmen könnnen, zu EINEM Zeitpunkt aber nur EINEN Wert.
 Excel: Zelle // Cell
 
 Datum, Zahl, Zeichenkette, num. Wert, ....
+
+=============================================
+
+Exceptions // Return Code:
+
+Exceptions: Gravierendes :)
+
+a) Exceptions
+
+b) Return Code
+
+=====================================
+
+Return Code:
+-----------
+
+Pro:
+===
+Simpel,
+schnell
+
+Contra:
+=======
+Kann man ignorieren.
+
+
+Return Code:
+-----------
+
+Pro:
+====
+Simpel,
+schnell
+
+Contra:
+=======
+Kann man ignorieren.
+
+Exceptions:
+-----------
+
+Pro:
+===
+Kann nicht ignoriert werden
+Hat eine Beschreibung drinne
+Man kann nach dem Typ filtern
+
+
+Contra:
+=======
+Langsamer
+Code mit Exception Handling ist vergleichweise länglich.
+( catch .... Kaskade )
+
+
+Freigabe von Resources: RAII
+Block
+
+========================================
+
+Nur eine return-Anweisung:
+
+   Ist das altmodisch oder auch noch modern ?????
+
+   Depends ...
+
+========================================
+
+Performanz: ==> Nicht wirklich gegeben.
+
+========================================
+
+Um welche Art von Fehlern geht es eigentlich genau ???
+
+Warning: im ini File hat ein Wert gefehlt, default Wert.
+
+Fatal:  ser-Device not found: ...
+
+========================================
+
+Logging unterfüttert ???
+
+Wie man es macht, macht man es falsch ...
+
+Über den Lauf der Jahre:
+
+Jung: ===> Streng zu programmieren.
+
+Alt:  ===> Go with the flow:
+
+      ABER: Silent Error Revovery: Logging.
+
+=========================================
+
+A) Exception oder Ret Code.
+
+B) Wie sieht es das Team:    A & B.
+
+============
+
+SW Architekt : Noooooooooo
+
+============
+
+Anforderungen ändern sich über die Zeit:
+
+
+================================================
+
+goto vs. try / catch
+
+Wieviel Funktionen:
+
+Library ???
+
+================================================
+
+goto:
+
+jmp ==> goto
+
+Bad Code:
+
+C ===> Kontrollstrukturen : if, while, for   
+
+Unkontrolliertes goto // Zwischen Scopes.
+
+Sicheren Einsatz: No goto.
+
+2 geschachtelte for-Schleifen:  label-break;
+
+==> goto.
+
+==============================================
+
+Einheitlichkeit:  Library
+
+Sinnvolle Teile ausmachen:
+
+Paketierung:
+
+std::expected
+
+==============================================
+ 
+constexpr:
+
+===> C
+===> Teile der STL
+
+
+new und delete ??? constexpr ????
+
+==============================================
+
+concepts:
+
+Für wen ????
+
+a) STL neu überarbeitet.
+
+   Proaktive Fehlermeldungen // Reagierende Fehlermeldungen.
+
+b) Für uns.
+
+
+==============================================
 
